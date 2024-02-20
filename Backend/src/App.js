@@ -13,7 +13,7 @@ initDb()
   .then(() => console.log("DB synced"))
   .catch((error) => console.log("error in DB" + error));
 
-app.use("/todo", MainRoute);
+app.use("/", MainRoute);
 
 app.listen(envData.PORT, (err) => {
   if (!err) {

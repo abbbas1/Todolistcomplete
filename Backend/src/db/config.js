@@ -6,6 +6,7 @@ const sequelize = new Sequelize("todolist", "postgres", "54321", {
   host: "localhost",
   port: "5432",
   dialect: "postgres",
+  logging:true
 });
 
 export const connectdb = async () => {

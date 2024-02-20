@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db/config.js";
+import TodoListModel from "./Todolist.js";
 
 const UserModel  = sequelize.define("user",{
     userEmail:{
@@ -12,4 +13,7 @@ const UserModel  = sequelize.define("user",{
     }
 })
 
-export default UserModel;
+UserModel.hasMany(TodoListModel)
+TodoListModel.belongsTo(UserModel)
+
+export default UserModel; 

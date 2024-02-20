@@ -1,9 +1,9 @@
-// import { Router } from "express";
-// import TodoListController from "../../controller/ListController.js";
+import { Router } from "express";
+import TodoListController from "../../controller/ListController.js";
 
-// const TodoListRouter = Router()
+const TodoListRouter = Router()
 
-// TodoListRouter.post("/create",TodoListController.taskCreation)
+TodoListRouter.post("/create",TodoListController.taskCreation)
 
 
-// export default TodoListRouter;
+export default TodoListRouter;
